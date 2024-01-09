@@ -1,0 +1,695 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : true,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "f270f900-7b0f-11ee-a5a6-69cbe8c43885"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "f266bfd0-7b0f-11ee-a5a6-69cbe8c43885"
+    },
+    "name" : "5.Data Convertion",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 1,
+      "type" : "True"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 7,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 10,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 11,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 12,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 13,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 2,
+      "type" : "True"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 3,
+      "type" : "1Phase Energy Monitor"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 14,
+      "type" : "Door Sensor"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 15,
+      "type" : "Air Quality Sensor"
+    }, {
+      "fromIndex" : 8,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 13,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 17,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 18,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 18,
+      "toIndex" : 16,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 4,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 337,
+        "layoutY" : 45
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "if ((metadata.deviceType == 'default'  )&& ( msg.EF000006 != null )) \n{\nreturn true;\n} else {\n    return false;\n}",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f26fc080-7b0f-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "DATA from Energy",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1164,
+        "layoutY" : 151
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f27035b0-7b0f-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Save",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 574,
+        "layoutY" : 148
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var intx = msg.EF000006;\n var   volt = (parseInt(intx.substring(0,4),16));\n var   amp =  parseInt(intx.substring(5,10),16);\nvar   watt =  parseInt(intx.substring(11,16),16);  \n volt = volt / 10;\n amp = amp / 1000;\nvar newMsg = {\nVolt:volt,\nAmp:amp,\nWatt:watt\n};\nreturn {msg: newMsg};\n",
+        "tbelScript" : "var intx = msg.EF000006;\n var   volt = (parseInt(intx.substring(0,4),16));\n var   amp =  parseInt(intx.substring(5,10),16);\n var   watt =  parseInt(intx.substring(11,16),16);  \n volt = volt / 10;\n amp = amp / 100;\nvar newMsg = {\nvolt:volt,\namp:amp,\nwatt:watt\n};\nreturn {msg: newMsg};\n"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f27083d0-7b0f-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Test",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 337,
+        "layoutY" : 147
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return msg.temperature > 20;",
+        "tbelScript" : "return msg.EF000006 != null ;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f270d1f0-7b0f-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Check msg.EF",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 64,
+        "layoutY" : 308
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f270f900-7b0f-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Device Profile",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbDeviceTypeSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 56,
+        "layoutY" : 407
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ "active" ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false,
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f2712010-7b0f-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "active",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 868,
+        "layoutY" : 574
+      },
+      "configuration" : {
+        "tableName" : "1PhaseEnergy",
+        "fieldsMapping" : {
+          "Volt" : "Volt",
+          "Watt" : "Watt",
+          "Amp" : "Amp",
+          "deviceName" : "Id",
+          "ts" : "ts"
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f2716e30-7b0f-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "SaveToCustom",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbSaveToCustomCassandraTableNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 840,
+        "layoutY" : 661
+      },
+      "configuration" : {
+        "operation" : "ADD",
+        "arguments" : [ {
+          "type" : "TIME_SERIES",
+          "key" : "Watt",
+          "name" : "x",
+          "defaultValue" : ""
+        }, {
+          "type" : "ATTRIBUTE",
+          "key" : "Kwh",
+          "name" : "y",
+          "attributeScope" : "SHARED_SCOPE",
+          "defaultValue" : null
+        } ],
+        "result" : {
+          "type" : "ATTRIBUTE",
+          "attributeScope" : "SHARED_SCOPE",
+          "key" : "Kwh",
+          "resultValuePrecision" : 2,
+          "addToBody" : false,
+          "addToMetadata" : false
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f2719540-7b0f-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Watt",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.math.TbMathNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 868,
+        "layoutY" : 187
+      },
+      "configuration" : {
+        "inputValueKey" : "Watt",
+        "outputValueKey" : "Kwh",
+        "mathFunction" : "SUM",
+        "aggIntervalType" : "HOUR",
+        "timeZoneId" : "Asia/Bangkok",
+        "aggIntervalValue" : 1,
+        "aggIntervalTimeUnit" : "HOURS",
+        "intervalPersistencePolicy" : "ON_EACH_CHECK_AFTER_INTERVAL_END",
+        "outMsgType" : "POST_TELEMETRY_REQUEST",
+        "intervalCheckValue" : 1,
+        "intervalCheckTimeUnit" : "MINUTES",
+        "statePersistencePolicy" : "PERIODICALLY",
+        "statePersistenceValue" : 1,
+        "statePersistenceTimeUnit" : "HOURS",
+        "autoCreateIntervals" : false,
+        "periodValue" : 5,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "group",
+          "entityGroupId" : null
+        },
+        "queueName" : "SequentialByOriginator"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f271bc50-7b0f-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Kwh",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.analytics.incoming.TbSimpleAggMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 872,
+        "layoutY" : 245
+      },
+      "configuration" : {
+        "inputValueKey" : "Watt",
+        "outputValueKey" : "AVGWattH",
+        "mathFunction" : "AVG",
+        "aggIntervalType" : "HOUR",
+        "timeZoneId" : "Asia/Bangkok",
+        "aggIntervalValue" : 1,
+        "aggIntervalTimeUnit" : "HOURS",
+        "intervalPersistencePolicy" : "ON_EACH_CHECK_AFTER_INTERVAL_END",
+        "outMsgType" : "POST_TELEMETRY_REQUEST",
+        "intervalCheckValue" : 1,
+        "intervalCheckTimeUnit" : "MINUTES",
+        "statePersistencePolicy" : "PERIODICALLY",
+        "statePersistenceValue" : 1,
+        "statePersistenceTimeUnit" : "HOURS",
+        "autoCreateIntervals" : false,
+        "periodValue" : 5,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "group",
+          "entityGroupId" : null
+        },
+        "queueName" : "SequentialByOriginator"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f271e360-7b0f-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "KwH",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.analytics.incoming.TbSimpleAggMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 872,
+        "layoutY" : 298
+      },
+      "configuration" : {
+        "inputValueKey" : "Watt",
+        "outputValueKey" : "AVGWattD",
+        "mathFunction" : "AVG",
+        "aggIntervalType" : "DAY",
+        "timeZoneId" : "Asia/Bangkok",
+        "aggIntervalValue" : 1,
+        "aggIntervalTimeUnit" : "HOURS",
+        "intervalPersistencePolicy" : "ON_EACH_CHECK_AFTER_INTERVAL_END",
+        "outMsgType" : "POST_TELEMETRY_REQUEST",
+        "intervalCheckValue" : 1,
+        "intervalCheckTimeUnit" : "MINUTES",
+        "statePersistencePolicy" : "PERIODICALLY",
+        "statePersistenceValue" : 1,
+        "statePersistenceTimeUnit" : "DAYS",
+        "autoCreateIntervals" : false,
+        "periodValue" : 5,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "group",
+          "entityGroupId" : null
+        },
+        "queueName" : "SequentialByOriginator"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f2720a70-7b0f-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "KwD",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.analytics.incoming.TbSimpleAggMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 870,
+        "layoutY" : 356
+      },
+      "configuration" : {
+        "inputValueKey" : "Watt",
+        "outputValueKey" : "SumWattH",
+        "mathFunction" : "SUM",
+        "aggIntervalType" : "HOUR",
+        "timeZoneId" : "Asia/Bangkok",
+        "aggIntervalValue" : 1,
+        "aggIntervalTimeUnit" : "HOURS",
+        "intervalPersistencePolicy" : "ON_EACH_CHECK_AFTER_INTERVAL_END",
+        "outMsgType" : "POST_TELEMETRY_REQUEST",
+        "intervalCheckValue" : 1,
+        "intervalCheckTimeUnit" : "MINUTES",
+        "statePersistencePolicy" : "PERIODICALLY",
+        "statePersistenceValue" : 1,
+        "statePersistenceTimeUnit" : "HOURS",
+        "autoCreateIntervals" : false,
+        "periodValue" : 5,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "group",
+          "entityGroupId" : null
+        },
+        "queueName" : "SequentialByOriginator"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f2723180-7b0f-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "SumWattH",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.analytics.incoming.TbSimpleAggMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 876,
+        "layoutY" : 412
+      },
+      "configuration" : {
+        "inputValueKey" : "Watt",
+        "outputValueKey" : "SumWattD",
+        "mathFunction" : "SUM",
+        "aggIntervalType" : "DAY",
+        "timeZoneId" : "Asia/Bangkok",
+        "aggIntervalValue" : 1,
+        "aggIntervalTimeUnit" : "HOURS",
+        "intervalPersistencePolicy" : "ON_EACH_CHECK_AFTER_INTERVAL_END",
+        "outMsgType" : "POST_TELEMETRY_REQUEST",
+        "intervalCheckValue" : 1,
+        "intervalCheckTimeUnit" : "MINUTES",
+        "statePersistencePolicy" : "PERIODICALLY",
+        "statePersistenceValue" : 1,
+        "statePersistenceTimeUnit" : "DAYS",
+        "autoCreateIntervals" : false,
+        "periodValue" : 5,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "group",
+          "entityGroupId" : null
+        },
+        "queueName" : "SequentialByOriginator"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f2723181-7b0f-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "SumWattD",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.analytics.incoming.TbSimpleAggMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 882,
+        "layoutY" : 481
+      },
+      "configuration" : {
+        "inputValueKey" : "Watt",
+        "outputValueKey" : "MaxWattH",
+        "mathFunction" : "MAX",
+        "aggIntervalType" : "HOUR",
+        "timeZoneId" : "Asia/Bangkok",
+        "aggIntervalValue" : 1,
+        "aggIntervalTimeUnit" : "HOURS",
+        "intervalPersistencePolicy" : "ON_EACH_CHECK_AFTER_INTERVAL_END",
+        "outMsgType" : "POST_TELEMETRY_REQUEST",
+        "intervalCheckValue" : 1,
+        "intervalCheckTimeUnit" : "MINUTES",
+        "statePersistencePolicy" : "PERIODICALLY",
+        "statePersistenceValue" : 1,
+        "statePersistenceTimeUnit" : "HOURS",
+        "autoCreateIntervals" : false,
+        "periodValue" : 5,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "group",
+          "entityGroupId" : null
+        },
+        "queueName" : "SequentialByOriginator"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f2725890-7b0f-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "MaxWattH",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.analytics.incoming.TbSimpleAggMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 334,
+        "layoutY" : 588
+      },
+      "configuration" : {
+        "fromMetadata" : false,
+        "renameKeysMapping" : {
+          "temp" : "temperature"
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "56612c90-7b16-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Door",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbRenameKeysNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 319,
+        "layoutY" : 688
+      },
+      "configuration" : {
+        "fromMetadata" : false,
+        "renameKeysMapping" : {
+          "EF000202" : "PM2_5",
+          "EF000212" : "Temperature",
+          "EF000213" : "Humidity",
+          "EF000214" : "CH20"
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a39e1cb0-85e4-11ee-ba8c-fdbc14c5ee8f"
+      },
+      "name" : "Air Quality",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbRenameKeysNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 856,
+        "layoutY" : 723
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "734a2cb0-85e5-11ee-ba8c-fdbc14c5ee8f"
+      },
+      "name" : "Save",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 322,
+        "layoutY" : 750
+      },
+      "configuration" : {
+        "fromMetadata" : false,
+        "renameKeysMapping" : {
+          "EF000215" : "VOC",
+          "EF000216" : "CO2"
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c96e0620-85e5-11ee-ba8c-fdbc14c5ee8f"
+      },
+      "name" : "Air2",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbRenameKeysNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 600,
+        "layoutY" : 725
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "if ( msg.Humidity != null) {\n  msg.Humidity = msg.Humidity / 10\n  }\n\nif ( msg.Temperature != null) {\n  msg.Temperature = msg.Temperature / 10\n  }\nif ( msg.CO2 != null) {\n  msg.CO2 = msg.CO2 / 10\n  }\n\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "437e5870-85e6-11ee-ba8c-fdbc14c5ee8f"
+      },
+      "name" : "Reformat",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
