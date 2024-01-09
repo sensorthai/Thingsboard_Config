@@ -1,0 +1,368 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : true,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "db8cbf30-7ace-11ee-a5a6-69cbe8c43885"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "db7825c0-7ace-11ee-a5a6-69cbe8c43885"
+    },
+    "name" : "1.Downlink to Gateway",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 11,
+      "type" : "34"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 12,
+      "type" : "56"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 2,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 2,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 7,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 8,
+      "toIndex" : 0,
+      "type" : "Post telemetry"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 3,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 10,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 8,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 301,
+        "layoutY" : 153
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "/** \n09:59:52.946 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/INFO1 = {\"Info1\":{\"Module\":\"ZB-GW03-V1.2\",\"Version\":\"12.5.0(tasmota)\",\"FallbackTopic\":\"cmnd/DVES_C3EF60_fb/\",\"GroupTopic\":\"CSC_PROJECT/CSC0001/cmnd/tasmotas/\"}}\n09:59:52.960 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/INFO2 = {\"Info2\":{\"WebServerMode\":\"Admin\",\"Ethernet\":{\"Hostname\":\"CAPTEUR-C3EF60-3936-eth\",\"IPAddress\":\"192.168.1.138\"}}}\n09:59:52.974 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/INFO3 = {\"Info3\":{\"RestartReason\":\"Software reset CPU\",\"BootCount\":25}}\n09:59:56.953 QPC: Reset\n09:59:56.958 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/STATE = {\"Time\":\"2023-09-24T09:59:56\",\"Uptime\":\"0T00:00:06\",\"UptimeSec\":6,\"Heap\":140,\"SleepMode\":\"Dynamic\",\"Sleep\":50,\"LoadAvg\":19,\"MqttCount\":1,\"Berry\":{\"HeapUsed\":3,\"Objects\":44}}\n10:00:06.227 ZIG: Resetting EZSP device\n10:00:07.539 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/RESULT = {\"ZbState\":{\"Status\":1,\"Message\":\"EFR32 EZSP booted\",\"RestartReason\":\"Power-on\",\"Code\":2}}\n10:00:07.630 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/RESULT = {\"ZbState\":{\"Status\":55,\"Version\":\"6.7.10.0\",\"Protocol\":8,\"Stack\":2}}\n10:00:07.644 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/RESULT = {\"ZbState\":{\"Status\":3,\"Message\":\"Configured, starting coordinator\"}}\n10:00:09.981 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/RESULT = {\"ZbState\":{\"Status\":56,\"IEEEAddr\":\"0x187A3EFFFE393533\",\"ShortAddr\":\"0x0000\",\"DeviceType\":1}}\n\n10:00:25.572 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/RESULT = {\"ZbParent\":{\"Device\":\"0x0000\",\"Children\":6,\"ChildInfo\":[\"0xA4C138CE1A53CBE8\",\"0xA4C138A5220A025C\",\"0xA4C138D0A590E6D4\",\"0xA4C13830944B0AC4\",\"0xBC33ACFFFE5BBCD3\",\"0xA4C138E7C2BDACA0\"]}}\n10:00:43.787 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/SENSOR = {\"ZbReceived\":{\"Device\":\"0x985F\",\"Name\":\"0xA4C138CE1A53CBE8\",\"0500?00\":\"010400010000\",\"ZoneStatusChange\":1025,\"ZoneStatusChangeZone\":1,\"Movement\":1,\"Endpoint\":1,\"LinkQuality\":89}}\n10:00:57.132 ZIG: Auto-responder: ZbSend {\"Device\":\"0xD759\",\"Cluster\":\"0x000A\",\"Endpoint\":1,\"Response\":\"000A/0007\":748839657}\n10:00:57.137 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/SENSOR = {\"ZbReceived\":{\"Device\":\"0xD759\",\"Cluster\":10,\"Read\":[7],\"ReadNames\":{\"LocalTime\":true},\"Endpoint\":1,\"LinkQuality\":123}}\n10:03:10.347 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/SENSOR = {\"ZbReceived\":{\"Device\":\"0x985F\",\"Name\":\"0xA4C138CE1A53CBE8\",\"0500?00\":\"010400010000\",\"ZoneStatusChange\":1025,\"ZoneStatusChangeZone\":1,\"Movement\":1,\"Endpoint\":1,\"LinkQuality\":100}}\n10:03:16.948 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/SENSOR = {\"ZbReceived\":{\"Device\":\"0x985F\",\"Name\":\"0xA4C138CE1A53CBE8\",\"0500?00\":\"010400010000\",\"ZoneStatusChange\":1025,\"ZoneStatusChangeZone\":1,\"Movement\":1,\"Endpoint\":1,\"LinkQuality\":79}}\n10:03:21.297 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/RESULT = {\"ZbState\":{\"Status\":21,\"Message\":\"Pairing mode enabled\"}}\n10:03:21.301 MQT: CSC_PROJECT/CSC0001/stat/CAPTEUR_C3EF60/RESULT = {\"ZbPermitJoin\":\"Done\"}\n10:03:22.719 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/SENSOR = {\"ZbReceived\":{\"Device\":\"0x985F\",\"Name\":\"0xA4C138CE1A53CBE8\",\"0500?00\":\"010400010000\",\"ZoneStatusChange\":1025,\"ZoneStatusChangeZone\":1,\"Movement\":1,\"Endpoint\":1,\"LinkQuality\":94}}\n10:03:29.013 ZIG: {\"ZbEZSPReceived\":\"230000005F98E8CB531ACE38C1A404\"}\n10:03:29.064 ZIG: {\"ZbEZSPReceived\":\"24005F98E8CB531ACE38C1A40203FFFF\"}\n10:03:32.764 ZIG: {\"ZbEZSPReceived\":\"230000015F98E8CB531ACE38C1A404\"}\n10:03:32.965 ZIG: {\"ZbEZSPReceived\":\"24005F98E8CB531ACE38C1A401000000\"}\n10:03:32.969 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/RESULT = {\"ZbState\":{\"Status\":34,\"IEEEAddr\":\"0xA4C138CE1A53CBE8\",\"ShortAddr\":\"0x985F\",\"ParentNetwork\":\"0x0000\",\"JoinStatus\":1,\"Decision\":0}}\n10:03:33.123 MQT: CSC_PROJECT/CSC0001/stat/CAPTEUR_C3EF60/RESULT = {\"0x985F\":{\"Name\":\"0xA4C138CE1A53CBE8\"}}\n10:03:33.519 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/RESULT = {\"ZbState\":{\"Status\":30,\"IEEEAddr\":\"0xA4C138CE1A53CBE8\",\"ShortAddr\":\"0x985F\",\"PowerSource\":false,\"ReceiveWhenIdle\":false,\"Security\":false}}\n10:03:33.670 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/RESULT = {\"ZbState\":{\"Status\":32,\"ActiveEndpoints\":[\"0x01\"]}}\n10:03:33.825 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/SENSOR = {\"ZbReceived\":{\"Device\":\"0x985F\",\"Name\":\"0xA4C138CE1A53CBE8\",\"ModelId\":\"TS0210\",\"Manufacturer\":\"_TZ3000_fkxmyics\",\"ZCLVersion\":3,\"AppVersion\":65,\"PowerSource\":3,\"0000/FFFE\":0,\"Endpoint\":1,\"LinkQuality\":126}}\n10:03:34.817 ZIG: {\"ZbEZSPReceived\":\"9B00E8CB531ACE38C1A406\"}\n10:03:35.824 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/RESULT = {\"ZbState\":{\"Status\":33,\"Device\":\"0x985F\",\"Endpoint\":\"0x01\",\"ProfileId\":\"0x0104\",\"DeviceId\":\"0x0402\",\"DeviceVersion\":1,\"InClusters\":[\"0x0001\",\"0x0500\",\"0x0000\"],\"OutClusters\":[\"0x0019\",\"0x000A\"]}}\n10:03:36.927 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/SENSOR = {\"ZbReceived\":{\"Device\":\"0x985F\",\"Name\":\"0xA4C138CE1A53CBE8\",\"CurrentZoneSensitivityLevel\":10,\"Endpoint\":1,\"LinkQuality\":118}}\n**/\n\nfunction nextRelation(metadata, msg) {\n \n \nif((msg.ZbState.Status  == '31')) {\n    return ['30'];\n}\nif((msg.ZbState.Status == '31')) {\n    return ['31'];\n}\n  \nif((msg.ZbState.Status == '32')) {\n    return ['32'];\n}\nif((msg.ZbState.Status == '33')) {\n    return ['33'];\n}\nif((msg.ZbState.Status == '34')) {\n    return ['34'];\n}\nif((msg.ZbState.Status == '56')) {\n    return ['56'];\n}\nif((msg.ZbState.Status == '20')) {\n    return ['20'];\n}\n \n}\nreturn nextRelation(metadata, msg);\n",
+        "tbelScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType == 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db8719e0-7ace-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Check Message from Gateway",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 618,
+        "layoutY" : 201
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var setName = {};\n//{\"Command\":'0x0A0C,0x70B3D52B6002F1A3'};\nsetName = {\"Command\": msg.ZbState.ShortAddr+','+msg.ZbState.IEEEAddr };\nmetadata.mqttCommand = \"ZbName\";\nreturn {msg: setName, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db8aea70-7ace-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "ZbName",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1127,
+        "layoutY" : 311
+      },
+      "configuration" : {
+        "integrationId" : "178b7000-77ee-11ee-92d7-c9d101394cdd"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db8b1180-7ace-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "SetCommand",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.integration.TbIntegrationDownlinkNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 617,
+        "layoutY" : 332
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var setName = {};\n//{\"Command\":'0x0A0C,0x70B3D52B6002F1A3'};\nsetName = {\"Command\": 1 };\nmetadata.mqttCommand = \"SetOption119\";\nreturn {msg: setName, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db8b5fa0-7ace-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "SetOption119",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 266,
+        "layoutY" : 537
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ "inactivityTimeout" ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false,
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db8b86b0-7ace-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "ADD Timeout",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 602,
+        "layoutY" : 876
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "/** \n09:59:52.946 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/INFO1 = {\"Info1\":{\"Module\":\"ZB-GW03-V1.2\",\"Version\":\"12.5.0(tasmota)\",\"FallbackTopic\":\"cmnd/DVES_C3EF60_fb/\",\"GroupTopic\":\"CSC_PROJECT/CSC0001/cmnd/tasmotas/\"}}\n09:59:52.960 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/INFO2 = {\"Info2\":{\"WebServerMode\":\"Admin\",\"Ethernet\":{\"Hostname\":\"CAPTEUR-C3EF60-3936-eth\",\"IPAddress\":\"192.168.1.138\"}}}\n09:59:52.974 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/INFO3 = {\"Info3\":{\"RestartReason\":\"Software reset CPU\",\"BootCount\":25}}\n09:59:56.953 QPC: Reset\n09:59:56.958 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/STATE = {\"Time\":\"2023-09-24T09:59:56\",\"Uptime\":\"0T00:00:06\",\"UptimeSec\":6,\"Heap\":140,\"SleepMode\":\"Dynamic\",\"Sleep\":50,\"LoadAvg\":19,\"MqttCount\":1,\"Berry\":{\"HeapUsed\":3,\"Objects\":44}}\n10:00:06.227 ZIG: Resetting EZSP device\n10:00:07.539 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/RESULT = {\"ZbState\":{\"Status\":1,\"Message\":\"EFR32 EZSP booted\",\"RestartReason\":\"Power-on\",\"Code\":2}}\n10:00:07.630 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/RESULT = {\"ZbState\":{\"Status\":55,\"Version\":\"6.7.10.0\",\"Protocol\":8,\"Stack\":2}}\n10:00:07.644 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/RESULT = {\"ZbState\":{\"Status\":3,\"Message\":\"Configured, starting coordinator\"}}\n10:00:09.981 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/RESULT = {\"ZbState\":{\"Status\":56,\"IEEEAddr\":\"0x187A3EFFFE393533\",\"ShortAddr\":\"0x0000\",\"DeviceType\":1}}\n\n10:00:25.572 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/RESULT = {\"ZbParent\":{\"Device\":\"0x0000\",\"Children\":6,\"ChildInfo\":[\"0xA4C138CE1A53CBE8\",\"0xA4C138A5220A025C\",\"0xA4C138D0A590E6D4\",\"0xA4C13830944B0AC4\",\"0xBC33ACFFFE5BBCD3\",\"0xA4C138E7C2BDACA0\"]}}\n10:00:43.787 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/SENSOR = {\"ZbReceived\":{\"Device\":\"0x985F\",\"Name\":\"0xA4C138CE1A53CBE8\",\"0500?00\":\"010400010000\",\"ZoneStatusChange\":1025,\"ZoneStatusChangeZone\":1,\"Movement\":1,\"Endpoint\":1,\"LinkQuality\":89}}\n10:00:57.132 ZIG: Auto-responder: ZbSend {\"Device\":\"0xD759\",\"Cluster\":\"0x000A\",\"Endpoint\":1,\"Response\":\"000A/0007\":748839657}\n10:00:57.137 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/SENSOR = {\"ZbReceived\":{\"Device\":\"0xD759\",\"Cluster\":10,\"Read\":[7],\"ReadNames\":{\"LocalTime\":true},\"Endpoint\":1,\"LinkQuality\":123}}\n10:03:10.347 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/SENSOR = {\"ZbReceived\":{\"Device\":\"0x985F\",\"Name\":\"0xA4C138CE1A53CBE8\",\"0500?00\":\"010400010000\",\"ZoneStatusChange\":1025,\"ZoneStatusChangeZone\":1,\"Movement\":1,\"Endpoint\":1,\"LinkQuality\":100}}\n10:03:16.948 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/SENSOR = {\"ZbReceived\":{\"Device\":\"0x985F\",\"Name\":\"0xA4C138CE1A53CBE8\",\"0500?00\":\"010400010000\",\"ZoneStatusChange\":1025,\"ZoneStatusChangeZone\":1,\"Movement\":1,\"Endpoint\":1,\"LinkQuality\":79}}\n10:03:21.297 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/RESULT = {\"ZbState\":{\"Status\":21,\"Message\":\"Pairing mode enabled\"}}\n10:03:21.301 MQT: CSC_PROJECT/CSC0001/stat/CAPTEUR_C3EF60/RESULT = {\"ZbPermitJoin\":\"Done\"}\n10:03:22.719 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/SENSOR = {\"ZbReceived\":{\"Device\":\"0x985F\",\"Name\":\"0xA4C138CE1A53CBE8\",\"0500?00\":\"010400010000\",\"ZoneStatusChange\":1025,\"ZoneStatusChangeZone\":1,\"Movement\":1,\"Endpoint\":1,\"LinkQuality\":94}}\n10:03:29.013 ZIG: {\"ZbEZSPReceived\":\"230000005F98E8CB531ACE38C1A404\"}\n10:03:29.064 ZIG: {\"ZbEZSPReceived\":\"24005F98E8CB531ACE38C1A40203FFFF\"}\n10:03:32.764 ZIG: {\"ZbEZSPReceived\":\"230000015F98E8CB531ACE38C1A404\"}\n10:03:32.965 ZIG: {\"ZbEZSPReceived\":\"24005F98E8CB531ACE38C1A401000000\"}\n10:03:32.969 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/RESULT = {\"ZbState\":{\"Status\":34,\"IEEEAddr\":\"0xA4C138CE1A53CBE8\",\"ShortAddr\":\"0x985F\",\"ParentNetwork\":\"0x0000\",\"JoinStatus\":1,\"Decision\":0}}\n10:03:33.123 MQT: CSC_PROJECT/CSC0001/stat/CAPTEUR_C3EF60/RESULT = {\"0x985F\":{\"Name\":\"0xA4C138CE1A53CBE8\"}}\n10:03:33.519 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/RESULT = {\"ZbState\":{\"Status\":30,\"IEEEAddr\":\"0xA4C138CE1A53CBE8\",\"ShortAddr\":\"0x985F\",\"PowerSource\":false,\"ReceiveWhenIdle\":false,\"Security\":false}}\n10:03:33.670 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/RESULT = {\"ZbState\":{\"Status\":32,\"ActiveEndpoints\":[\"0x01\"]}}\n10:03:33.825 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/SENSOR = {\"ZbReceived\":{\"Device\":\"0x985F\",\"Name\":\"0xA4C138CE1A53CBE8\",\"ModelId\":\"TS0210\",\"Manufacturer\":\"_TZ3000_fkxmyics\",\"ZCLVersion\":3,\"AppVersion\":65,\"PowerSource\":3,\"0000/FFFE\":0,\"Endpoint\":1,\"LinkQuality\":126}}\n10:03:34.817 ZIG: {\"ZbEZSPReceived\":\"9B00E8CB531ACE38C1A406\"}\n10:03:35.824 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/RESULT = {\"ZbState\":{\"Status\":33,\"Device\":\"0x985F\",\"Endpoint\":\"0x01\",\"ProfileId\":\"0x0104\",\"DeviceId\":\"0x0402\",\"DeviceVersion\":1,\"InClusters\":[\"0x0001\",\"0x0500\",\"0x0000\"],\"OutClusters\":[\"0x0019\",\"0x000A\"]}}\n10:03:36.927 MQT: CSC_PROJECT/CSC0001/tele/CAPTEUR_C3EF60/SENSOR = {\"ZbReceived\":{\"Device\":\"0x985F\",\"Name\":\"0xA4C138CE1A53CBE8\",\"CurrentZoneSensitivityLevel\":10,\"Endpoint\":1,\"LinkQuality\":118}}\n**/\n\nfunction nextRelation(metadata, msg) {\n \n \nif((msg.ZbState.Status  == '31')) {\n    return ['30'];\n}\nif((msg.ZbState.Status == '31')) {\n    return ['31'];\n}\n  \nif((msg.ZbState.Status == '32')) {\n    return ['32'];\n}\nif((msg.ZbState.Status == '33')) {\n    return ['33'];\n}\nif((msg.ZbState.Status == '34')) {\n    return ['34'];\n}\nif((msg.ZbState.Status == '56')) {\n    return ['56'];\n}\nif((msg.ZbState.Status == '20')) {\n    return ['20'];\n}\n \n}\nreturn nextRelation(metadata, msg);\n",
+        "tbelScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType == 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db8bd4d0-7ace-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Check Message from Gateway",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 614,
+        "layoutY" : 428
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var inact = {};\ninact.inactivityTimeout = 86400000;\nreturn {msg: inact, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db8c4a00-7ace-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "ss_inactivityTimeout",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1126,
+        "layoutY" : 427
+      },
+      "configuration" : {
+        "scope" : "SERVER_SCOPE",
+        "notifyDevice" : false,
+        "sendAttributesUpdatedNotification" : false,
+        "updateAttributesOnlyOnValueChange" : "false"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db8c7110-7ace-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "save Inactivity timeout",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 120,
+        "layoutY" : 332
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db8cbf30-7ace-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Switch message type",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 524,
+        "layoutY" : 74
+      },
+      "configuration" : {
+        "detailsList" : [ "TITLE" ],
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "7baccda0-7ad1-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Customer ID",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetCustomerDetailsNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 458,
+        "layoutY" : 261
+      },
+      "configuration" : {
+        "detailsList" : [ "TITLE" ],
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "7bad1bc0-7ad1-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Customer ID",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetCustomerDetailsNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 528,
+        "layoutY" : 14
+      },
+      "configuration" : {
+        "detailsList" : [ "TITLE" ],
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "899617e0-7ad2-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Tenant Title",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetTenantDetailsNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 376,
+        "layoutY" : 363
+      },
+      "configuration" : {
+        "detailsList" : [ "TITLE" ],
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "89966600-7ad2-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Tenant Title",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetTenantDetailsNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
