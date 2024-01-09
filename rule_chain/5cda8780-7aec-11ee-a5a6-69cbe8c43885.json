@@ -1,0 +1,132 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : true,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "ea329520-7aef-11ee-a5a6-69cbe8c43885"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "5cda8780-7aec-11ee-a5a6-69cbe8c43885"
+    },
+    "name" : "3.RPC to Gateway",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 1,
+      "toIndex" : 0,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 2,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 3,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 529,
+        "layoutY" : 152
+      },
+      "configuration" : {
+        "integrationId" : "178b7000-77ee-11ee-92d7-c9d101394cdd"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8907e2d0-7aec-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Zigbee Gateway",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.integration.TbIntegrationDownlinkNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 280,
+        "layoutY" : 152
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var setCommand = {};\nsetCommand = {\"Command\": msg.params };\nmetadata.mqttCommand = msg.method;\nreturn {msg: setCommand, metadata: metadata, msgType: msgType};",
+        "tbelScript" : ""
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "89085800-7aec-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Zigbee Gateway",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 253,
+        "layoutY" : 87
+      },
+      "configuration" : {
+        "detailsList" : [ "TITLE" ],
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "cde76350-7aef-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Customer Detail",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetCustomerDetailsNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 266,
+        "layoutY" : 15
+      },
+      "configuration" : {
+        "detailsList" : [ "TITLE" ],
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "ea329520-7aef-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "tenant",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetTenantDetailsNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
