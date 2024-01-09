@@ -1,0 +1,28 @@
+{
+  "entityType" : "CONVERTER",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : {
+      "scriptLang" : "JS",
+      "decoder" : "/**\nTS0001_switch.zb\n\n#Z2Tv1\n# TuYa generic switch such as https://www.zigbee2mqtt.io/devices/TS0001_switch_module.html\n:TS0001,_TZ3000_*\n0006/8002%30,StartUpOnOff\n-------------------------------\nTZE204_cjbofhxw.zb\n\n#Z2Tv1\n# 1 Phase Energy Meter\n:TS0601,_TZE204_cjbofhxw\nEF00/0212=0B04/050B # ActivePower W\nEF00/0213=0B04/0502 # ActiveCurrent  mA\nEF00?25=TuyaBattery # RMSVoltage\n-------------------------------------\nTuya_150A_energy.zb\n\n#Z2Tv1\n# Energy Meter\n:TS0601,_TZE204_ac0fhfiq\nEF00/0265=0B04/050B #Active Power\n-------------------------------------\n\nTuya_TZE200.zb\n\n#Z2Tv1\n# Tuya fix bad reads on LCD temp/humidity item\n:TS0601,_TZE200_*\nEF00/0409=0204/0000         # Display mode (1=F 0=C)\nEF00/0201=0402/0000,mul:10  # Temperature\nEF00/0202=0405/0000,mul:100 # Humidity\nEF00/0204=0001/0021,mul:2   # Battery level\n---------------------------------------\nTuya_ZG-204ZL.zb\n\n#Z2Tv1\n# Human presence sensor Zigbee\n# https://zigbee.blakadder.com/Tuya_ZG-204ZL.html\n:TS0601,_TZE200_3towulqd\n:TS0601,_TZE200_1ibpyhdc\n:TS0601,_TZE200_bh3n6gk8  \nEF00/0204=0001/0021,mul:2 # Battery level\nEF00/026D=0406/0000 # Battery level\nEF00/0265=0400/0000 # map to illuminance MeasuredValue\n----------------------------------------\n\n\n\n\n\n**/",
+      "tbelDecoder" : "// Decode an uplink message from a buffer\n// payload - array of bytes\n// metadata - key/value object\n\n/** Decoder **/\n\n// decode payload to string\nvar payloadStr = decodeToString(payload);\n\n// decode payload to JSON\n// var data = decodeToJson(payload);\n\nvar deviceName = 'Device A';\nvar deviceType = 'thermostat';\nvar customerName = 'Customer C';\nvar groupName = 'thermostat devices';\n// use assetName and assetType instead of deviceName and deviceType\n// to automatically create assets instead of devices.\n// var assetName = 'Asset A';\n// var assetType = 'building';\n\n// Result object with device/asset attributes/telemetry data\nvar result = {\n// Use deviceName and deviceType or assetName and assetType, but not both.\n   deviceName: deviceName,\n   deviceType: deviceType,\n// assetName: assetName,\n// assetType: assetType,\n// customerName: customerName,\n   groupName: groupName,\n   attributes: {\n       model: 'Model A',\n       serialNumber: 'SN111',\n       integrationName: metadata['integrationName']\n   },\n   telemetry: {\n       temperature: 42,\n       humidity: 80,\n       rawData: payloadStr\n   }\n};\n\n/** Helper functions 'decodeToString' and 'decodeToJson' are already built-in **/\n\nreturn result;",
+      "encoder" : null,
+      "tbelEncoder" : null
+    },
+    "debugMode" : false,
+    "edgeTemplate" : false,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "CONVERTER",
+      "id" : "d30c49d0-7b1d-11ee-a5a6-69cbe8c43885"
+    },
+    "name" : "Zigbee File.zb",
+    "type" : "UPLINK"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
