@@ -1,0 +1,1179 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : true,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "d589ec40-7ad6-11ee-a5a6-69cbe8c43885"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "d5774ea0-7ad6-11ee-a5a6-69cbe8c43885"
+    },
+    "name" : "2.Notification Alert and  Add inactivityTimeout",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 2,
+      "type" : "False"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 29,
+      "type" : "Post telemetry"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 4,
+      "type" : "True"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 5,
+      "type" : "False"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 6,
+      "type" : "Created"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 6,
+      "type" : "Cleared"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 7,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 8,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 8,
+      "toIndex" : 34,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 11,
+      "type" : "True"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 12,
+      "type" : "False"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 13,
+      "type" : "Created"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 13,
+      "type" : "Cleared"
+    }, {
+      "fromIndex" : 13,
+      "toIndex" : 14,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 15,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 34,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 16,
+      "toIndex" : 17,
+      "type" : "True"
+    }, {
+      "fromIndex" : 16,
+      "toIndex" : 18,
+      "type" : "False"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 19,
+      "type" : "Created"
+    }, {
+      "fromIndex" : 18,
+      "toIndex" : 19,
+      "type" : "Cleared"
+    }, {
+      "fromIndex" : 19,
+      "toIndex" : 20,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 20,
+      "toIndex" : 21,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 21,
+      "toIndex" : 34,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 22,
+      "toIndex" : 23,
+      "type" : "True"
+    }, {
+      "fromIndex" : 22,
+      "toIndex" : 24,
+      "type" : "False"
+    }, {
+      "fromIndex" : 23,
+      "toIndex" : 27,
+      "type" : "Created"
+    }, {
+      "fromIndex" : 24,
+      "toIndex" : 27,
+      "type" : "Cleared"
+    }, {
+      "fromIndex" : 25,
+      "toIndex" : 28,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 27,
+      "toIndex" : 25,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 28,
+      "toIndex" : 26,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 29,
+      "toIndex" : 3,
+      "type" : "Water Leak Sensor"
+    }, {
+      "fromIndex" : 29,
+      "toIndex" : 16,
+      "type" : "Rain Sensor"
+    }, {
+      "fromIndex" : 29,
+      "toIndex" : 22,
+      "type" : "Door Windows Sensor"
+    }, {
+      "fromIndex" : 29,
+      "toIndex" : 30,
+      "type" : "Smoke Detector"
+    }, {
+      "fromIndex" : 29,
+      "toIndex" : 33,
+      "type" : "Door Windows Sensor"
+    }, {
+      "fromIndex" : 29,
+      "toIndex" : 33,
+      "type" : "Smoke Detector"
+    }, {
+      "fromIndex" : 29,
+      "toIndex" : 33,
+      "type" : "Temperature Humidity Sensor"
+    }, {
+      "fromIndex" : 29,
+      "toIndex" : 33,
+      "type" : "Vibration Sensor"
+    }, {
+      "fromIndex" : 29,
+      "toIndex" : 33,
+      "type" : "Water Leak Sensor"
+    }, {
+      "fromIndex" : 30,
+      "toIndex" : 10,
+      "type" : "True"
+    }, {
+      "fromIndex" : 31,
+      "toIndex" : 32,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 33,
+      "toIndex" : 31,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 34,
+      "toIndex" : 36,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 36,
+      "toIndex" : 35,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 0,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 50,
+        "layoutY" : 240
+      },
+      "configuration" : {
+        "persistAlarmRulesState" : false,
+        "fetchAlarmRulesStateOnStart" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d589ec40-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Device Profile Node",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.profile.TbDeviceProfileNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 55,
+        "layoutY" : 336
+      },
+      "configuration" : {
+        "originatorTypes" : [ "ENTITY_GROUP" ]
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d58a6170-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Is Entity Group",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbOriginatorTypeFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 37,
+        "layoutY" : 445
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d58b4bd0-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Message Type Switch",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 517,
+        "layoutY" : 185
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "if(msg.Water==true && msg.hasOwnProperty(\"Water\"))\n{\n    return true;\n}\nelse\n{\n    return false;\n}",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d58bc100-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Water Leak Cheking",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 901,
+        "layoutY" : 73
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "Water Leak Alarm",
+        "severity" : "CRITICAL",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : true,
+        "propagateToOwnerHierarchy" : false,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d58c0f20-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Create Water Leak Alarm",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 888,
+        "layoutY" : 199
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmType" : "Water Leak Alarm"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d58c5d40-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Clear Water Leak Alarm",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbClearAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1194,
+        "layoutY" : 129
+      },
+      "configuration" : {
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : false,
+          "direction" : "TO",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ "ASSET" ]
+          } ]
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d58cd270-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Relation to Asset",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbDuplicateMsgToRelatedNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1349,
+        "layoutY" : 34
+      },
+      "configuration" : {
+        "ignoreNullStrings" : false,
+        "dataMapping" : {
+          "name" : "AssetName",
+          "type" : "AssetType"
+        },
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d58d2090-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "ChageMetaData",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetOriginatorFieldsNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1418,
+        "layoutY" : 127
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "// metadata.message = \"hellofromthingsboard\";\r\nvar options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };\r\nvar AlarmDate   = new Date();\r\nif (msg.status == \"ACTIVE_UNACK\") {\r\n    var d = new Date(msg.endTs);\r\n    metadata.message = \"\\n\" + metadata.AssetName +\r\n         \" พบน้ำรั่ว !!!\\n \\udbc0\\udc29 !!!\\n\" +\r\n        AlarmDate.toLocaleString(\"th-TH\")  ;\r\n\r\n}\r\nelse if(msg.status==\"CLEARED_UNACK\")\r\n{\r\n    var d = new Date(msg.endTs);\r\n    metadata.message = \"\\n\" + metadata.AssetName +\r\n        \" ไม่พบน้ำรั่วแล้ว\\n\" +\r\n         AlarmDate.toLocaleString(\"th-TH\");\r\n}\r\nreturn {\r\n    msg: msg,\r\n    metadata: metadata,\r\n    msgType: msgType\r\n};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d58d6eb0-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Generate Line Script",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 56,
+        "layoutY" : 57
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "// ART Nj3FxmyX1Do0D0TjSqKSkmq82J4sDhS4GxY79W2ts6m\n// CSC QDNOWaW0IO3h9oJs4H1AVd35cpRXV5Cnm10Y3yPQDhA\n// การทาง lDd4jg2NDs375Qej5zyDK4uhAl76y4aLyPabRMrC4bd\n// WSA-TEchnical RVOs7dmRiZfSbQuNnzDvaDpdsVryzIQRVHJ6hpntWdI\n\n// PTK dliX0MMUbBU60B3qczkMjdjd1M3IlHZKcNnoi0rcSTr\n// SK105 HBDGbFI57Qg80sTUBKzzWC4fv9DOajzVZJQul5qIUTl\n// Premier Lighthing t9tPKGK0j5GnUfd9Ej4AtZnFHvxXNlq5bu8AADWz6RE\n// PONGSAKORN xbpyK1mRNUvaERbsB3Tbn9nT3qsYxqbKLf19KRNOP8I\n// Vanisakit g4eVlwtuH6bRF9lc48JbYXdiSdl8I34AdhVYxyDeP1N\n// Banchakit eVTaj0dDH1OK8ghxiACuIDn0wk5iGMylMiqJy5NkVI8\n// Polpatana tPGNSeGl5HvwRqCaSZnyxcnx9aiXbREkPApXakGR9xT\n// First Tech pYqg7QbhPbDADUdKEgJ1CFjDNWp9PbNuzJpP4hez6OO\n// KVM 3hCTeauhqtHXL9FnsvhTyAqdwuxtaFL00OMjUd413jw\n// PP Thanaboon DFe5oh82SjGGONYQkzLEnzrWSifxEN0lJ3YbTS6OnEw\n// S.Sarmsarng q8HC0tKfBMgVNEI3yx5BLjDN8wDjDZDbi9fLIzUoXTN\n",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d58e3200-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "เก็บ Token",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 519,
+        "layoutY" : 421
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "if(msg.Humidity >1)\n{\n    return true;\n}\nelse\n{\n    return false;\n}",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d58e5910-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Smoke Alarm Check",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 903,
+        "layoutY" : 309
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "Smoke Alarm",
+        "severity" : "MAJOR",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : false,
+        "propagateToOwnerHierarchy" : false,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d58ea730-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Smoke Alarm",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 890,
+        "layoutY" : 435
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmType" : "Smoke Alarm"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d58f1c60-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Clear Smoke Alarm",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbClearAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1196,
+        "layoutY" : 365
+      },
+      "configuration" : {
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : false,
+          "direction" : "TO",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ "ASSET" ]
+          } ]
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d58f6a80-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Relation to Asset",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbDuplicateMsgToRelatedNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1351,
+        "layoutY" : 270
+      },
+      "configuration" : {
+        "ignoreNullStrings" : false,
+        "dataMapping" : {
+          "name" : "AssetName",
+          "type" : "AssetType"
+        },
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d58fb8a0-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "ChageMetaData",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetOriginatorFieldsNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1420,
+        "layoutY" : 363
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "// metadata.message = \"hellofromthingsboard\";\r\nvar options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };\r\nvar AlarmDate   = new Date();\r\nif (msg.status == \"ACTIVE_UNACK\") {\r\n    var d = new Date(msg.endTs);\r\n    metadata.message = \"\\n\" + metadata.AssetName +\r\n        \" พบควัน\\n \\udbc0\\udc65 !!!\\n\" +\r\n        AlarmDate.toLocaleString(\"th-TH\") ;\r\n\r\n}\r\nelse if(msg.status==\"CLEARED_UNACK\")\r\n{\r\n    var d = new Date(msg.endTs);\r\n    metadata.message = \"\\n\" + metadata.AssetName +\r\n        \" ไม่พบควันแล้ว\\n\" +\r\n         AlarmDate.toLocaleString(\"th-TH\");\r\n}\r\nreturn {\r\n    msg: msg,\r\n    metadata: metadata,\r\n    msgType: msgType\r\n};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d59006c0-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Generate Line Script",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 527,
+        "layoutY" : 635
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "if(msg.Rain==true && msg.hasOwnProperty(\"Rain\"))\n{\n    return true;\n}\nelse\n{\n    return false;\n}",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d590a300-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Rain Alarm Check",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 911,
+        "layoutY" : 523
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "Rain Alarm",
+        "severity" : "MAJOR",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : false,
+        "propagateToOwnerHierarchy" : false,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d590f120-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Rain Alarm",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 898,
+        "layoutY" : 649
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmType" : "Rain Alarm"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d5911830-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Clear Rain Alarm",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbClearAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1204,
+        "layoutY" : 579
+      },
+      "configuration" : {
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : false,
+          "direction" : "TO",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ "ASSET" ]
+          } ]
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d5916650-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Relation to Asset",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbDuplicateMsgToRelatedNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1359,
+        "layoutY" : 484
+      },
+      "configuration" : {
+        "ignoreNullStrings" : false,
+        "dataMapping" : {
+          "name" : "AssetName",
+          "type" : "AssetType"
+        },
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d591b470-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "ChageMetaData",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetOriginatorFieldsNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1428,
+        "layoutY" : 577
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "// metadata.message = \"hellofromthingsboard\";\r\nvar options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };\r\nvar AlarmDate   = new Date();\r\nif (msg.status == \"ACTIVE_UNACK\") {\r\n    var d = new Date(msg.endTs);\r\n    metadata.message = \"\\n\" + metadata.AssetName +\r\n        \" มีน้ำรั่ว!!!\\n \\udbc0\\udcaa !\\n\" +\r\n        AlarmDate.toLocaleString(\"th-TH\") ;\r\n\r\n}\r\nelse if(msg.status==\"CLEARED_UNACK\")\r\n{\r\n    var d = new Date(msg.endTs);\r\n    metadata.message = \"\\n\" + metadata.AssetName +\r\n        \" ไม่พบน้ำรั่วแล้ว\\n\" +\r\n        AlarmDate.toLocaleString(\"th-TH\");\r\n}\r\nreturn {\r\n    msg: msg,\r\n    metadata: metadata,\r\n    msgType: msgType\r\n};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d5920290-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Generate Line Script",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 528,
+        "layoutY" : 868
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "if(msg.Contact==true && msg.hasOwnProperty(\"Contact\"))\n{\n    return true;\n}\nelse\n{\n    return false;\n}",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d592c5e0-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Door Alarm Check",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 912,
+        "layoutY" : 756
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "Door Alarm",
+        "severity" : "MAJOR",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : false,
+        "propagateToOwnerHierarchy" : false,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d5931400-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Door Alarm",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 899,
+        "layoutY" : 882
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmType" : "Door Alarm"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d5938930-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Clear Door Alarm",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbClearAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1429,
+        "layoutY" : 810
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "// metadata.message = \"hellofromthingsboard\";\r\n//https://help.salesforce.com/s/articleView?id=sf.mc_gc_dynamically_add_emoji_to_a_message.htm&type=5\r\n\r\nvar options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };\r\nvar AlarmDate   = new Date();\r\nif (msg.status == \"ACTIVE_UNACK\") {\r\n    var d = new Date(msg.endTs);\r\n    metadata.message = \"\\n ประตู \" + metadata.ss_DoorLocation +\r\n        \" เปิดอยู่!!!\\n \\udbc0\\udc35 \\n\" +\r\n        AlarmDate.toLocaleString(\"th-TH\");\r\n\r\n}\r\nelse if(msg.status==\"CLEARED_UNACK\")\r\n{\r\n    var d = new Date(msg.endTs);\r\n    metadata.message = \"\\n  ประตู \" + metadata.ss_DoorLocation +\r\n        \" ปิดแล้ว\\n\" +\r\n         AlarmDate.toLocaleString(\"th-TH\");\r\n}\r\nreturn {\r\n    msg: msg,\r\n    metadata: metadata,\r\n    msgType: msgType\r\n};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d593fe60-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Generate Line Script",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1623,
+        "layoutY" : 722
+      },
+      "configuration" : {
+        "restEndpointUrlPattern" : "https://notify-api.line.me/api/notify?message=${message}",
+        "requestMethod" : "POST",
+        "useSimpleClientHttpFactory" : false,
+        "trimDoubleQuotes" : false,
+        "ignoreRequestBody" : false,
+        "enableProxy" : false,
+        "useSystemProxyProperties" : false,
+        "proxyScheme" : null,
+        "proxyHost" : null,
+        "proxyPort" : 0,
+        "proxyUser" : null,
+        "proxyPassword" : null,
+        "readTimeoutMs" : 0,
+        "maxParallelRequestsCount" : 0,
+        "headers" : {
+          "Content-Type" : "application/x-www-form-urlencoded",
+          "Authorization" : "Bearer QDNOWaW0IO3h9oJs4H1AVd35cpRXV5Cnm10Y3yPQDhA"
+        },
+        "useRedisQueueForMsgPersistence" : false,
+        "trimQueue" : null,
+        "maxQueueSize" : null,
+        "credentials" : {
+          "type" : "anonymous"
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d594c1b0-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "LIne",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.rest.TbRestApiCallNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1357,
+        "layoutY" : 716
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ "DoorLocation" ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false,
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d59536e0-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "DoorLocation",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1427,
+        "layoutY" : 883
+      },
+      "configuration" : {
+        "dataMapping" : {
+          "LineNoti1" : "LineNoti1"
+        },
+        "dataToFetch" : "LATEST_TELEMETRY",
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d5958500-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Customer Line KEY",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetCustomerAttributeNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 31,
+        "layoutY" : 548
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d595d320-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Device Profile Switch",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbDeviceTypeSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 521,
+        "layoutY" : 309
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "if(msg.hasOwnProperty(\"Humidity\"))\n{\n    return true;\n}\nelse\n{\n    return false;\n}",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d5962140-7ad6-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Check Message Humidity",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 25,
+        "layoutY" : 868
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var timeoutdata = {};\ntimeoutdata.inactivityTimeout = 86400000;\nreturn {msg: timeoutdata, metadata: metadata, msgType:  \"POST_ATTRIBUTES_REQUEST\"};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "815961e0-7ad7-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Add inactivityTimeout 1 day",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 19,
+        "layoutY" : 979
+      },
+      "configuration" : {
+        "scope" : "SERVER_SCOPE",
+        "notifyDevice" : false,
+        "sendAttributesUpdatedNotification" : false,
+        "updateAttributesOnlyOnValueChange" : "false"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8159b000-7ad7-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Save Attribute",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 23,
+        "layoutY" : 768
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ "inactivityTimeout" ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false,
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "3caf8ad0-7ae9-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Check inactivityTimeout",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1744,
+        "layoutY" : 320
+      },
+      "configuration" : {
+        "detailsList" : [ "TITLE" ],
+        "fetchTo" : "METADATA"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "053fecc0-7b11-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Assign Customer Title",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetCustomerDetailsNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2077,
+        "layoutY" : 389
+      },
+      "configuration" : {
+        "restEndpointUrlPattern" : "https://notify-api.line.me/api/notify?message=${message}",
+        "requestMethod" : "POST",
+        "useSimpleClientHttpFactory" : false,
+        "trimDoubleQuotes" : false,
+        "ignoreRequestBody" : false,
+        "enableProxy" : false,
+        "useSystemProxyProperties" : false,
+        "proxyScheme" : null,
+        "proxyHost" : null,
+        "proxyPort" : 0,
+        "proxyUser" : null,
+        "proxyPassword" : null,
+        "readTimeoutMs" : 0,
+        "maxParallelRequestsCount" : 0,
+        "headers" : {
+          "Content-Type" : "application/x-www-form-urlencoded",
+          "Authorization" : "Bearer ${Bearer}"
+        },
+        "useRedisQueueForMsgPersistence" : false,
+        "trimQueue" : null,
+        "maxQueueSize" : null,
+        "credentials" : {
+          "type" : "anonymous"
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "05403ae0-7b11-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "LIne",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.rest.TbRestApiCallNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2076,
+        "layoutY" : 314
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "if (metadata.customer_title == 'CSC0002') {\nmetadata.Bearer =  'Nj3FxmyX1Do0D0TjSqKSkmq82J4sDhS4GxY79W2ts6m'\n}\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "614c12a0-7b11-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Add Line Barrer",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
