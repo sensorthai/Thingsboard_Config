@@ -1,0 +1,241 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "241ae240-7af2-11ee-a5a6-69cbe8c43885"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "24138f40-7af2-11ee-a5a6-69cbe8c43885"
+    },
+    "name" : "4.Automation",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 1,
+      "type" : "Door Windows Sensor"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 2,
+      "type" : "Smoke Detector"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 6,
+      "type" : "Button 3 Switch"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 5,
+      "type" : "True"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 0,
+      "type" : "Post attributes"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 0,
+      "type" : "Post telemetry"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 7,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 3,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 311,
+        "layoutY" : 149
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "241a4600-7af2-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Device Profile",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbDeviceTypeSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 629,
+        "layoutY" : 38
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return msg.temperature > 20;",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "241a9420-7af2-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Door Sensor",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 620,
+        "layoutY" : 321
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return msg.temperature > 20;",
+        "tbelScript" : "return msg.temperature > 20;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "241abb30-7af2-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Smoke Detector",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 47,
+        "layoutY" : 236
+      },
+      "configuration" : {
+        "persistAlarmRulesState" : false,
+        "fetchAlarmRulesStateOnStart" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "241ae240-7af2-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Device Profile",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.profile.TbDeviceProfileNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 38,
+        "layoutY" : 327
+      },
+      "configuration" : {
+        "originatorTypes" : [ "DEVICE" ]
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "241b0950-7af2-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Entity type",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbOriginatorTypeFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 42,
+        "layoutY" : 423
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "241b3060-7af2-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Message Swith",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 624,
+        "layoutY" : 534
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : " \n    \n    if  (( msg.LidlPower == 0 ) && ( msg.Endpoint == 1)) {\n    msg.ButtomAction = \"SinglePress1\";\n    }\n     if  (( msg.LidlPower == 0 ) && ( msg.Endpoint == 2)) {\n    msg.ButtomAction = \"SinglePress2\";\n    }\n     if  (( msg.LidlPower == 0 ) && ( msg.Endpoint == 3)) {\n    msg.ButtomAction = \"SinglePress3\";\n    }\n        if  (( msg.LidlPower == 1 ) && ( msg.Endpoint == 1)) {\n    msg.ButtomAction = \"DoublePress1\";\n    }\n     if  (( msg.LidlPower == 1 ) && ( msg.Endpoint == 2)) {\n    msg.ButtomAction = \"DoublePress2\";\n    }\n     if  (( msg.LidlPower == 1 ) && ( msg.Endpoint == 3)) {\n    msg.ButtomAction = \"DoublePress3\";\n    }\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "241b5770-7af2-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Check Buttom Action",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 913,
+        "layoutY" : 531
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "241b7e80-7af2-11ee-a5a6-69cbe8c43885"
+      },
+      "name" : "Save",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
