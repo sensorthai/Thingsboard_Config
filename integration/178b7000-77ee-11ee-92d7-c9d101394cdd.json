@@ -1,0 +1,104 @@
+{
+  "entityType" : "INTEGRATION",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "allowCreateDevicesOrAssets" : true,
+    "configuration" : {
+      "clientConfiguration" : {
+        "host" : "mqtt.wsa.cloud",
+        "port" : 1883,
+        "cleanSession" : true,
+        "retainedMessage" : false,
+        "ssl" : false,
+        "connectTimeoutSec" : 10,
+        "clientId" : "",
+        "maxBytesInMessage" : 32368,
+        "credentials" : {
+          "type" : "basic",
+          "username" : "csc",
+          "password" : "cscadmin"
+        }
+      },
+      "topicFilters" : [ {
+        "filter" : "CSC_PROJECT2/+/tele/+/INFO1",
+        "qos" : 0
+      }, {
+        "filter" : "CSC_PROJECT2/+/tele/+/INFO2",
+        "qos" : 0
+      }, {
+        "filter" : "CSC_PROJECT2/+/tele/+/INFO3",
+        "qos" : 0
+      }, {
+        "filter" : "CSC_PROJECT2/+/tele/+/LWT",
+        "qos" : 0
+      }, {
+        "filter" : "CSC_PROJECT2/+/tele/+/RESULT",
+        "qos" : 0
+      }, {
+        "filter" : "CSC_PROJECT2/+/tele/+/SENSOR",
+        "qos" : 0
+      } ],
+      "downlinkTopicPattern" : "${topic}",
+      "metadata" : { }
+    },
+    "debugMode" : true,
+    "defaultConverterId" : {
+      "entityType" : "CONVERTER",
+      "id" : "b1268430-77ed-11ee-92d7-c9d101394cdd"
+    },
+    "downlinkConverterId" : {
+      "entityType" : "CONVERTER",
+      "id" : "bfc35c70-77ed-11ee-92d7-c9d101394cdd"
+    },
+    "edgeTemplate" : false,
+    "enabled" : true,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "INTEGRATION",
+      "id" : "178b7000-77ee-11ee-92d7-c9d101394cdd"
+    },
+    "name" : "GATEWAY",
+    "remote" : false,
+    "routingKey" : "2384763f-086f-3fd1-efd2-eb4daeb4ff02",
+    "secret" : "8zef5yr7z8t2mxgwic08",
+    "type" : "MQTT"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "INTEGRATION",
+      "id" : "178b7000-77ee-11ee-92d7-c9d101394cdd"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "98f0f200-836f-11ee-ba8c-fdbc14c5ee8f"
+    },
+    "type" : "ManagedByIntegration",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "INTEGRATION",
+      "id" : "178b7000-77ee-11ee-92d7-c9d101394cdd"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "5c765200-7aed-11ee-a5a6-69cbe8c43885"
+    },
+    "type" : "ManagedByIntegration",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"success\":true}",
+      "key" : "integration_status_iot1v30",
+      "lastUpdateTs" : 1703561427630,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}
