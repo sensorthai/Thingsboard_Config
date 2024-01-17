@@ -1,0 +1,44 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "de248ed0-7ad3-11ee-a5a6-69cbe8c43885"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "8f711a10-78b2-11ee-a5a6-69cbe8c43885"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "e2b98040-7ad3-11ee-a5a6-69cbe8c43885"
+    },
+    "label" : null,
+    "name" : "ห้อง 1453",
+    "ownerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "8f711a10-78b2-11ee-a5a6-69cbe8c43885"
+    },
+    "type" : "Room"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "e2b98040-7ad3-11ee-a5a6-69cbe8c43885"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "f586e2d0-7ad3-11ee-a5a6-69cbe8c43885"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

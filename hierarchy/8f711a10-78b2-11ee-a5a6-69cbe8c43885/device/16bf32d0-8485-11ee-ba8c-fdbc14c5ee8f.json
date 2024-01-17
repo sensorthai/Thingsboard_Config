@@ -1,0 +1,82 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : null,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "8f711a10-78b2-11ee-a5a6-69cbe8c43885"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "16bdd340-8485-11ee-ba8c-fdbc14c5ee8f"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "16bf32d0-8485-11ee-ba8c-fdbc14c5ee8f"
+    },
+    "label" : null,
+    "name" : "0xA4C1386C3BF2B3FD",
+    "ownerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "8f711a10-78b2-11ee-a5a6-69cbe8c43885"
+    },
+    "softwareId" : null,
+    "type" : "Air Quality Sensor"
+  },
+  "credentials" : {
+    "credentialsId" : "inRax21deHmosbJX8eHR",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "INTEGRATION",
+      "id" : "fb822930-77ed-11ee-92d7-c9d101394cdd"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "16bf32d0-8485-11ee-ba8c-fdbc14c5ee8f"
+    },
+    "type" : "ManagedByIntegration",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1704110119697,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1703688896814,
+      "longValue" : 1703688896813,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1705481727477,
+      "longValue" : 1705481727467,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

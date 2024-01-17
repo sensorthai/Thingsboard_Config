@@ -1,0 +1,90 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : null,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "8f711a10-78b2-11ee-a5a6-69cbe8c43885"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "5f6f7360-77f0-11ee-92d7-c9d101394cdd"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "cddfe540-7b1b-11ee-a5a6-69cbe8c43885"
+    },
+    "label" : null,
+    "name" : "0xA4C138A5220A025C",
+    "ownerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "8f711a10-78b2-11ee-a5a6-69cbe8c43885"
+    },
+    "softwareId" : null,
+    "type" : "Water Leak Sensor"
+  },
+  "credentials" : {
+    "credentialsId" : "NqPKTzl0pxmXdV8hz48A",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "INTEGRATION",
+      "id" : "fb822930-77ed-11ee-92d7-c9d101394cdd"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "cddfe540-7b1b-11ee-a5a6-69cbe8c43885"
+    },
+    "type" : "ManagedByIntegration",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1704111832281,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1703769237421,
+      "longValue" : 1703769237418,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityTimeout",
+      "lastUpdateTs" : 1699106987226,
+      "longValue" : 86400000,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1705472050178,
+      "longValue" : 1705472050155,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

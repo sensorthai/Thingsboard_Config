@@ -1,0 +1,90 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : null,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "8f711a10-78b2-11ee-a5a6-69cbe8c43885"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "aacc36a0-7b0f-11ee-a5a6-69cbe8c43885"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "aaccabd0-7b0f-11ee-a5a6-69cbe8c43885"
+    },
+    "label" : null,
+    "name" : "0xA4C138B1CD39FC27",
+    "ownerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "8f711a10-78b2-11ee-a5a6-69cbe8c43885"
+    },
+    "softwareId" : null,
+    "type" : "Smoke Detector"
+  },
+  "credentials" : {
+    "credentialsId" : "rt3B1Ij3RatR8so8tXNm",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "INTEGRATION",
+      "id" : "fb822930-77ed-11ee-92d7-c9d101394cdd"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "aaccabd0-7b0f-11ee-a5a6-69cbe8c43885"
+    },
+    "type" : "ManagedByIntegration",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1700700597599,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1700700597601,
+      "longValue" : 1700700597599,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityTimeout",
+      "lastUpdateTs" : 1699104720819,
+      "longValue" : 86400000,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1700614184028,
+      "longValue" : 1700614184023,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

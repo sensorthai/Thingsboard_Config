@@ -1,0 +1,33 @@
+{
+  "entityType" : "CUSTOMER",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "",
+      "allowWhiteLabeling" : true,
+      "homeDashboardId" : "40caac10-77ee-11ee-92d7-c9d101394cdd",
+      "homeDashboardHideToolbar" : true
+    },
+    "address" : null,
+    "address2" : null,
+    "city" : null,
+    "country" : null,
+    "customerId" : null,
+    "email" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "CUSTOMER",
+      "id" : "8f711a10-78b2-11ee-a5a6-69cbe8c43885"
+    },
+    "name" : "CSC0002",
+    "ownerId" : null,
+    "parentCustomerId" : null,
+    "phone" : null,
+    "state" : null,
+    "title" : "CSC0002",
+    "zip" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : null,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "96518910-7e0b-11ee-a825-f35d3b8cbf16"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "75f825a0-78b3-11ee-a5a6-69cbe8c43885"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "98f0f200-836f-11ee-ba8c-fdbc14c5ee8f"
+    },
+    "label" : null,
+    "name" : "CAPTEUR_C254F0",
+    "ownerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "96518910-7e0b-11ee-a825-f35d3b8cbf16"
+    },
+    "softwareId" : null,
+    "type" : "Zigbee Gateway"
+  },
+  "credentials" : {
+    "credentialsId" : "E65EkuuF7uYsZDVTgH5D",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "INTEGRATION",
+      "id" : "178b7000-77ee-11ee-92d7-c9d101394cdd"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "98f0f200-836f-11ee-ba8c-fdbc14c5ee8f"
+    },
+    "type" : "ManagedByIntegration",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1704774244871,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1704774244872,
+      "longValue" : 1704774244871,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1704773605448,
+      "longValue" : 1704773605429,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}
