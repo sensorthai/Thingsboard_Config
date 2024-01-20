@@ -21,6 +21,7 @@
     "name" : "Node-Uplink-SENSOR",
     "type" : "UPLINK"
   },
+  "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
   }
